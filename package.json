@@ -1,0 +1,26 @@
+{
+  "name": "g4-logger",
+  "version": "0.0.1",
+  "description": "A simple winston logger that is configured with some niceties such as listening for a SIGUSR2 change log levels",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AllegiantAir/g4-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "winston"
+  ],
+  "author": "Nathan A Sculli <nathan.sculli@allegiantair.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AllegiantAir/g4-logger/issues"
+  },
+  "homepage": "https://github.com/AllegiantAir/g4-logger",
+  "dependencies": {
+    "winston": "^0.7.3"
+  }
+}
