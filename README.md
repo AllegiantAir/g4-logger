@@ -16,3 +16,19 @@ We use syslog levels [RFC-5424](http://tools.ietf.org/html/rfc5424) for the leve
 * `5` = `Notice` (notice) - Normal but significant condition. May indicate a potential problem.
 * `6` = `Informational` (info) - Normal operational messages.
 * `7` = `Debug` (debug) - Information useful to developers for debugging the application.
+
+Usage
+-----
+Simply load the module and then call the appropriate message functions.
+```javascript
+  var logger = require('g4-logger');
+  
+  logger.log('My super message');
+  // Should output [info] - My super message
+   
+  logger.error('My terrible error');
+  // should output [error] - My terrible error
+  
+  logger.panic('Everyone panic!');
+  // should output [panic] - Everyone panic!
+```
