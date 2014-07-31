@@ -54,7 +54,10 @@ var winston = require('winston'),
         timestamp: timestamp
       });
 
-      logger.log("LOGGER - Setting `log level` to: " + level + "(" + config.levels[level] + ")");
+      setTimeout(logger.info.bind(logger), 0,
+        "LOGGER - Setting `log level` to: " + level + "(" + config.levels[level] + ")"
+      );
+
       currentLevelName = level;
     }
 ;
@@ -85,7 +88,7 @@ level_to_name = (function (res) {
 
 // Allow the user to toggle through the log levels by sending a SIGUSR2 signal
 // to the process.
-process.on(PROCESS_SIGNAL, function () {
+process.on('SIGUSR2', function () {
   var current_level = config.levels[currentLevelName],
       next_level    = current_level + 1,
       next_level_name
