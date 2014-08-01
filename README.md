@@ -32,7 +32,7 @@ Simply load the module and then call the appropriate message functions.
   logger.error('My terrible error');
   // should output [error] - My terrible error
   
-  logger.warn('Beware of codes!);
+  logger.warn('Beware of codes!');
   // should output [warn] - Beware of codes!
   
   logger.log('notice', 'A fancy notice');
