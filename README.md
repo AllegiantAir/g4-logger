@@ -23,9 +23,11 @@ Simply load the module and then call the appropriate message functions.
 ```javascript
   var logger = require('g4-logger');
   
+  logger.panic('Everyone panic!');
   logger.log('panic', 'Everyone panic!');
   // should output [panic] - Everyone panic!
   
+  logger.crit('A critical error');
   logger.log('crit', 'A critical error.');
   // should output [crit] - A critical error.
    
@@ -35,6 +37,7 @@ Simply load the module and then call the appropriate message functions.
   logger.warn('Beware of codes!');
   // should output [warn] - Beware of codes!
   
+  logger.notice('A fancy notice');
   logger.log('notice', 'A fancy notice');
   // should output [notice] - A fancy notice
   
